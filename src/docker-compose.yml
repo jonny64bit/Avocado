@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  avocado.web:
+    image: ${DOCKER_REGISTRY-}avocadoweb
+    build:
+      context: .
+      dockerfile: Avocado.Web/Dockerfile
+    ports:
+      - "7575:80"
+      - "7676:443"
+
+networks:
+  default:
+    external:
+      name: online_dl

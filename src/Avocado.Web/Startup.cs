@@ -1,3 +1,5 @@
+using Avocado.Base;
+using Avocado.Base.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,6 +10,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Avocado.Base.Interfaces.FileProcessors;
+using Avocado.Base.Services.FileProcessors;
+using Avocado.Database;
+using Avocado.Web.Helpers;
+using Microsoft.EntityFrameworkCore;
 
 namespace Avocado.Web
 {
@@ -23,7 +30,24 @@ namespace Avocado.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            ////////////////////////
+            ////EF Core
+            ////////////////////////
+            services.AddDbContext<DAL>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            });
+
+            ////////////////////////
+            ////ASP.NET Framework
+            ////////////////////////
             services.AddControllersWithViews();
+
+            ////////////////////////
+            ////DI
+            ////////////////////////
+            SetupDependencyInjection(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +63,7 @@ namespace Avocado.Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -52,6 +77,16 @@ namespace Avocado.Web
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private static void SetupDependencyInjection(IServiceCollection services)
+        {
+            //Transient
+            services.AddTransient<IService, Service>();
+            services.AddTransient<IMeterReadingFileProcessor, MeterReadingFileProcessor>();
+
+            //Auto Mapper
+            services.AddAutoMapper(typeof(AutoMapperProfile));
         }
     }
 }

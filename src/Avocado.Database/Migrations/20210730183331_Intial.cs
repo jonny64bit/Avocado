@@ -1,8 +1,10 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Avocado.Database.Migrations
 {
+    [ExcludeFromCodeCoverage(Justification = "Auto generated")]
     public partial class Intial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -8,6 +8,8 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Avocado.Web/Avocado.Web.csproj", "Avocado.Web/"]
+COPY ["Avocado.Base/Avocado.Base.csproj", "Avocado.Base/"]
+COPY ["Avocado.Database/Avocado.Database.csproj", "Avocado.Database/"]
 RUN dotnet restore "Avocado.Web/Avocado.Web.csproj"
 COPY . .
 WORKDIR "/src/Avocado.Web"

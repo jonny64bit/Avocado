@@ -1,10 +1,12 @@
-﻿using System.IO;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
 namespace Avocado.Database
 {
+    [ExcludeFromCodeCoverage(Justification = "Not used in production")]
     public class TemporaryDbContextFactory : IDesignTimeDbContextFactory<DAL>
     {
         public DAL CreateDbContext(string[] args)

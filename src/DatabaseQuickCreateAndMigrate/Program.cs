@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using Avocado.Database;
 using Microsoft.Data.SqlClient;
@@ -11,6 +12,7 @@ namespace DatabaseQuickCreateAndMigrate
     /// <summary>
     /// This is just a quick and dirty method of fast prototyping entity framework schemas and migrations.
     /// </summary>
+    [ExcludeFromCodeCoverage(Justification = "This just a helper tool for developers")]
     class Program
     {
         //Set sql box location

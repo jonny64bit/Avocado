@@ -5,10 +5,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Avocado.Database.Migrations
 {
     [DbContext(typeof(DAL))]
+    [ExcludeFromCodeCoverage(Justification = "Auto generated")]
     partial class DALModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
