@@ -16,7 +16,7 @@ namespace Avocado.Database
 
             var builder = new DbContextOptionsBuilder<DAL>();
             builder.UseSqlServer(config.GetConnectionString("DefaultConnection"),
-                b => b.MigrationsAssembly(nameof(Database)));
+                b => b.MigrationsAssembly(typeof(TemporaryDbContextFactory).Namespace));
 
             return new DAL(builder.Options);
         }
