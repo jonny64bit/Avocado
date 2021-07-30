@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avocado.Database", "Avocado.Database\Avocado.Database.csproj", "{4C11607D-E242-4CFC-BB7F-4A4E8897FFA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{347004D0-6A7B-4BAC-820E-46E47B22762E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseQuickCreateAndMigrate", "DatabaseQuickCreateAndMigrate\DatabaseQuickCreateAndMigrate.csproj", "{6620AB83-3FED-4229-91DF-0350EC150AD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avocado.Web", "Avocado.Web\Avocado.Web.csproj", "{8CEFB57E-5CDD-463D-A411-DBE668382DA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C11607D-E242-4CFC-BB7F-4A4E8897FFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C11607D-E242-4CFC-BB7F-4A4E8897FFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C11607D-E242-4CFC-BB7F-4A4E8897FFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C11607D-E242-4CFC-BB7F-4A4E8897FFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6620AB83-3FED-4229-91DF-0350EC150AD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6620AB83-3FED-4229-91DF-0350EC150AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6620AB83-3FED-4229-91DF-0350EC150AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6620AB83-3FED-4229-91DF-0350EC150AD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CEFB57E-5CDD-463D-A411-DBE668382DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEFB57E-5CDD-463D-A411-DBE668382DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEFB57E-5CDD-463D-A411-DBE668382DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEFB57E-5CDD-463D-A411-DBE668382DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6620AB83-3FED-4229-91DF-0350EC150AD4} = {347004D0-6A7B-4BAC-820E-46E47B22762E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2130F2FD-CFD1-4E5B-A672-A3C7928089A6}
+	EndGlobalSection
+EndGlobal
