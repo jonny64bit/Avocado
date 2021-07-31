@@ -1,8 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    ViewBag.TopMenu = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <h1 class="display-4">Welcome to Avocado</h1>
+    <p>This site consists of:
+        <ul>
+            <li>A single API call on <code>/meter-reading-uploads</code></li>
+            <li>A CURD page for basic accounts editing</li>
+        </ul>
+</p>
 </div>
+@section Scripts {
+    <script type="text/javascript" src="@Url.Content("~/dist/js/empty.js")" asp-append-version="true" asp-add-nonce></script>
+}
