@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "aefc18de-0563-439f-886d-434fd61931a8",
+		"name": "Avocado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "meter-reading-uploads",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Source/Avocado/Postman/Meter_Reading.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:7676/meter-reading-uploads",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7676",
+					"path": [
+						"meter-reading-uploads"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
