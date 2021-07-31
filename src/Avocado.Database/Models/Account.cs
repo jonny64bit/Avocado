@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Pact.Web.Vue.Grid.Interfaces;
 
 namespace Avocado.Database.Models
 {
-    public class Account
+    public class Account : IDatabaseObject
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
