@@ -88,4 +88,4 @@ It makes use of my open source Vue grid component [https://github.com/assureddt/
 - Missing security hardening or any authentication
 - Only got default BS5 theme
 - I generally wouldn't recommend passing CSV files around over APIs rather use JSON instead
-- I would recommend rejecting the whole batch if any of the lines didn't validate.
+- I would recommend rejecting the whole batch if any of the lines didn't validate
