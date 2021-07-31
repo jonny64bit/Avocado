@@ -42,6 +42,33 @@ namespace Avocado.Base.Tests.Services.FileProcessors
                 x => x.When.DateTime.ShouldBe(new DateTime(2019, 4, 22, 12, 25, 0)));
         }
 
+        [Fact]
+        public async Task Basic_No_Header_Row()
+        {
+            // arrange
+            await Context.Accounts.AddAsync(new() {Id = 12345, FirstName = "James", LastName = "Bond"});
+            await Context.SaveChangesAsync();
+
+            var fileProcessor = Mocker.CreateInstance<MeterReadingFileProcessor>();
+
+            var row = "12345,22/04/2019 12:25,45522";
+
+            // act
+            var result = await fileProcessor.Process(FakeFileToBytes(row));
+
+            // assert
+            result.ShouldSatisfyAllConditions(
+                x => x.total.ShouldBe(1),
+                x => x.processed.ShouldBe(1),
+                x => x.errors.ShouldBeEmpty());
+
+            (await Context.MeterReadings.CountAsync()).ShouldBe(1);
+            (await Context.MeterReadings.FirstAsync()).ShouldSatisfyAllConditions(
+                x => x.AccountId.ShouldBe(12345),
+                x => x.Value.ShouldBe(45522),
+                x => x.When.DateTime.ShouldBe(new DateTime(2019, 4, 22, 12, 25, 0)));
+        }
+
         [Theory]
         [InlineData("1241")]
         [InlineData("1241,11/04/2019 09:24")]

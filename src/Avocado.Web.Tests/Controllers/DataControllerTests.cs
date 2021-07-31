@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -87,7 +86,7 @@ namespace Avocado.Web.Tests.Controllers
                 x => x.Detail.ShouldSatisfyAllConditions(
                     c => c.Total.ShouldBe(2),
                     c => c.Processed.ShouldBe(1),
-                    c => c.Errors.Count().ShouldBe(1),
+                    c => c.Errors.Count.ShouldBe(1),
                     c => c.Errors.First().ShouldBe("A nasty error")));
         }
 
@@ -116,7 +115,7 @@ namespace Avocado.Web.Tests.Controllers
                 x => x.Detail.ShouldSatisfyAllConditions(
                     c => c.Total.ShouldBe(1),
                     c => c.Processed.ShouldBe(0),
-                    c => c.Errors.Count().ShouldBe(1),
+                    c => c.Errors.Count.ShouldBe(1),
                     c => c.Errors.First().ShouldBe("Everyone loves Avocados")));
         }
     }
