@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Accounts";
+    ViewBag.TopMenu = "Accounts";
+}
+<div class="row">
+    <div class="col">
+        <div id="accounts-crud"></div>
+    </div>
+</div>
+@section Scripts {
+    <script type="text/javascript" src="@Url.Content("~/dist/js/accounts.js")" asp-append-version="true" asp-add-nonce></script>
+}

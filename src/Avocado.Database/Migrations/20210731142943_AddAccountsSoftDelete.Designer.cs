@@ -4,16 +4,16 @@ using Avocado.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Avocado.Database.Migrations
 {
     [DbContext(typeof(DAL))]
-    [ExcludeFromCodeCoverage(Justification = "Auto generated")]
-    partial class DALModelSnapshot : ModelSnapshot
+    [Migration("20210731142943_AddAccountsSoftDelete")]
+    partial class AddAccountsSoftDelete
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
