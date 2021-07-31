@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avocado.Database", "Avocado.Database\Avocado.Database.csproj", "{4C11607D-E242-4CFC-BB7F-4A4E8897FFA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avocado.Database", "src\Avocado.Database\Avocado.Database.csproj", "{4C11607D-E242-4CFC-BB7F-4A4E8897FFA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{347004D0-6A7B-4BAC-820E-46E47B22762E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseQuickCreateAndMigrate", "DatabaseQuickCreateAndMigrate\DatabaseQuickCreateAndMigrate.csproj", "{6620AB83-3FED-4229-91DF-0350EC150AD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseQuickCreateAndMigrate", "src\DatabaseQuickCreateAndMigrate\DatabaseQuickCreateAndMigrate.csproj", "{6620AB83-3FED-4229-91DF-0350EC150AD4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avocado.Web", "Avocado.Web\Avocado.Web.csproj", "{8CEFB57E-5CDD-463D-A411-DBE668382DA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avocado.Web", "src\Avocado.Web\Avocado.Web.csproj", "{8CEFB57E-5CDD-463D-A411-DBE668382DA3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avocado.Base", "Avocado.Base\Avocado.Base.csproj", "{6D0EE89A-778B-45B0-9C89-099AD32BF1CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avocado.Base", "src\Avocado.Base\Avocado.Base.csproj", "{6D0EE89A-778B-45B0-9C89-099AD32BF1CD}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B590683B-4C1D-466C-926C-16F94D015544}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "src\docker-compose.dcproj", "{B590683B-4C1D-466C-926C-16F94D015544}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{492C05D2-A03A-4665-A2A7-3AD09AA43802}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avocado.Tests.Shared", "Avocado.Tests.Shared\Avocado.Tests.Shared.csproj", "{94EA9579-9334-4B23-AF8E-1CFEE88856E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avocado.Tests.Shared", "src\Avocado.Tests.Shared\Avocado.Tests.Shared.csproj", "{94EA9579-9334-4B23-AF8E-1CFEE88856E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avocado.Base.Tests", "Avocado.Base.Tests\Avocado.Base.Tests.csproj", "{A978AD73-D339-44D2-B414-9FA51DDA3B5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avocado.Base.Tests", "src\Avocado.Base.Tests\Avocado.Base.Tests.csproj", "{A978AD73-D339-44D2-B414-9FA51DDA3B5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avocado.Web.Tests", "Avocado.Web.Tests\Avocado.Web.Tests.csproj", "{DC21C932-A76A-4102-9953-7962601D11F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avocado.Web.Tests", "src\Avocado.Web.Tests\Avocado.Web.Tests.csproj", "{DC21C932-A76A-4102-9953-7962601D11F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
