@@ -1,5 +1,3 @@
-using System;
-
 namespace Avocado.Web.Models
 {
     public class ErrorViewModel
