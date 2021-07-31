@@ -5,8 +5,7 @@
   "author": "Jonathan Dent",
   "scripts": {
     "build": "vue-cli-service build --mode development",
-    "lint": "vue-cli-service lint",
-    "build-prod": "vue-cli-service build --mode production"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@assureddt/pact-vue-grid": "0.0.42-beta",
